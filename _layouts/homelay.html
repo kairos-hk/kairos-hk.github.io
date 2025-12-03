@@ -2,40 +2,74 @@
 layout: default
 ---
 
-<div id="homeid" class="col-sm-8 ml-0 nopadding-left">
-	<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover" >
-		<!-- Menu -->
-		<ol class="carousel-indicators">
-			<li data-target="#carousel" data-slide-to="0" class="active"></li>
-			<li data-target="#carousel" data-slide-to="1"></li>
-			<li data-target="#carousel" data-slide-to="1"></li>
-		</ol>
+<h1>About</h1>
 
-		<!-- Items -->
-		<div class="carousel-inner" markdown="0">
-			<div class="item active">
-				<img src="{{ site.url }}{{ site.baseurl }}/images/slider/slider-image.png" alt="Slide 1" />
-			</div>
-			<div class="item">
-				<img src="{{ site.url }}{{ site.baseurl }}/images/slider/slider-image.png" alt="Slide 2" />
-			</div>
-			<div class="item">
-				<img src="{{ site.url }}{{ site.baseurl }}/images/slider/slider-image.png" alt="Slide 2" />
-			</div>
-		</div>
-		<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-		<span class="sr-only">Next</span>
-		</a>
-	</div>
+{% assign member = site.posts | where: 'permalink', 'home/researcher-name' | first %}
+{% if member %}
+<div class="card team-member-card">
+    <div class="row mt-3">
+        <div class="col-md-3 text-center">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.image }}"
+                class="img-circle img-responsive"
+                style="max-width: 200px;"/>
+        </div>
 
-	{{ content }}
+        <div class="col-md-9">
+            <div class="card-body">
+                <h2 class="card-title">{{ member.title }}</h2>
+                <h4 class="card-text">{{ member.role }}</h4>
+                
+                <!-- Social -->
+                <ul class="list-inline list-unstyled">
+                    <!-- Twitter -->
+                    {% if member.social.twitter %}
+                        <li><a target="blank" href="{{member.social.twitter}}"><i class="fab fa-twitter"></i></a></li>
+                    {% endif %}
+                    <!-- Linkedin -->
+                    {% if member.social.linkedin %}
+                        <li><a target="blank" href="{{member.social.linkedin}}"><i class="fab fa-linkedin"></i></a></li>
+                    {% endif %}
+                    <!-- Github -->
+                    {% if member.social.github %}
+                        <li><a target="blank" href="{{member.social.github}}"><i class="fab fa-github"></i></a></li>
+                    {% endif %}
+                    <!-- Personal Website -->
+                    {% if member.social.website %}
+                        <li><a target="blank" href="{{member.social.website}}"><i class="fas fa-globe"></i></a></li>
+                    {% endif %}
+                    <!-- Google Scholar -->
+                    {% if member.social.google-scholar %}
+                        <li><a target="blank" href="{{member.social.google-scholar}}"><i class="fab fa-google"></i></a></li>
+                    {% endif %}
+                    <!-- Orcid -->
+                    {% if member.social.orcid %}
+                        <li><a target="blank" href="{{member.social.orcid}}"><i class="fab fa-orcid"></i></a></li>
+                    {% endif %}
+                    <!-- Research Gate -->
+                    {% if member.social.research-gate %}
+                        <li><a target="blank" href="{{member.social.research-gate}}"><i class="fab fa-researchgate"></i></a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div id="newsid" class="col-sm-4 nopadding-right" >
-	{% include tweets.html %}
+<!-- Education -->
+<div class="row mt-4">
+    <h3>Education</h3>
+    <ul class="list-unstyled">
+        {% for education in member.education %}
+            <li>{{education}}</li>
+        {% endfor %}
+    </ul>
 </div>
+
+<!-- Bio -->
+<div class="row mt-4">
+    <h3>Bio</h3>
+    {{ member.content }}
+</div>
+{% endif %}
+
+{{ content }}
