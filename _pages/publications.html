@@ -12,39 +12,48 @@ permalink: /publications/
     <div class="panel panel-default">
 
     {% for publi in site.data.publications %}
-        <div class="panel-heading">
-            <a data-toggle="collapse" data-parent="#accordion"
-               href="#collapse{{forloop.index}}"
-               style="color: inherit;">
-            <!-- authors -->
-            {% assign authors = "" | split:"/" %}
-            {% for author in publi.author %}
-                {% assign authors = authors | push: author.family %}
-            {% endfor %}
-            {{ authors | array_to_sentence_string }},
+                <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion"
+                             href="#collapse{{forloop.index}}"
+                             style="color: inherit; display:block;">
+                        <!-- authors -->
+                        {% assign authors = "" | split:"/" %}
+                        {% for author in publi.author %}
+                                {% assign authors = authors | push: author.family %}
+                        {% endfor %}
+                        {{ authors | array_to_sentence_string }},
 
-            <!-- title with link -->
-            "{{ publi.title }}",
+                        <!-- title with link -->
+                        "{{ publi.title }}",
 
-            <!-- container -->
-            <b>{{ publi.container-title }}</b>
+                        <!-- container -->
+                        <b>{{ publi.container-title }}</b>
 
-            <!-- issued date -->
-            ({{ publi.issued.date-parts | jsonify | slice: 3,4 }}),
+                        <!-- issued date -->
+                        ({{ publi.issued.date-parts | jsonify | slice: 3,4 }})
+                        </a>
 
-            <!-- DOI -->
-            {% if publi.DOI %}
-                <a href="https://doi.org/{{publi.DOI}}">DOI:{{publi.DOI}}</a>
-            {% endif %}
-            </a>
-        </div>
+                        {% comment %} Prefer explicit `link` field from JSON; fall back to DOI URL if provided. {% endcomment %}
+                        {% assign pub_link = publi.link | default: '' %}
+                        {% if pub_link == '' and publi.DOI %}
+                            {% assign pub_link = 'https://doi.org/' | append: publi.DOI %}
+                        {% endif %}
+
+                        {% if pub_link != '' %}
+                            <a class="btn btn-xs btn-link" href="{{ pub_link }}" target="_blank" style="margin-left:8px;">External</a>
+                        {% elsif publi.DOI %}
+                            <span class="text-muted" style="margin-left:8px;">DOI: {{ publi.DOI }}</span>
+                        {% endif %}
+                </div>
 
         <div id="collapse{{forloop.index}}" class="panel-collapse collapse in">
             <div class="panel-body">
                 <p>{{ publi.abstract }}</p>
 
-                <a class="btn btn-outline-primary" href="https://doi.org/{{publi.DOI}}"
-                   role="button" target="blank">Link</a>
+                     {% if pub_link != '' %}
+                     <a class="btn btn-outline-primary" href="{{ pub_link }}"
+                         role="button" target="_blank">Link</a>
+                     {% endif %}
             </div>
         </div>
     {% endfor %}

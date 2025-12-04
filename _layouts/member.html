@@ -6,7 +6,7 @@ layout: default
     <div class=row>
         <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ site.baseurl }}/about">About</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
         </ol>
         </nav>
@@ -23,10 +23,6 @@ layout: default
 
         <!-- Social -->
         <ul class="list-inline list-unstyled">
-            <!-- Twitter -->
-            {% if page.social.twitter %}
-                <li><a target="blank" href="{{page.social.twitter}}"><i class="fab fa-twitter"></i></a></li>
-            {% endif %}
             <!-- Linkedin -->
             {% if page.social.linkedin %}
                 <li><a target="blank" href="{{page.social.linkedin}}"><i class="fab fa-linkedin"></i></a></li>
@@ -34,10 +30,6 @@ layout: default
             <!-- Github -->
             {% if page.social.github %}
                 <li><a target="blank" href="{{page.social.github}}"><i class="fab fa-github"></i></a></li>
-            {% endif %}
-            <!-- Personal Website -->
-            {% if page.social.website %}
-                <li><a target="blank" href="{{page.social.website}}"><i class="fas fa-globe"></i></a></li>
             {% endif %}
             <!-- Google Scholar -->
             {% if page.social.google-scholar %}
@@ -63,10 +55,25 @@ layout: default
             {% endfor %}
         </ul>
     </div>
-
-    <!-- Bio -->
+    <!-- experience -->
     <div class="row">
-        <h3>Bio</h3>
-        {{ content }}
+        <h3>Experience</h3>
+        <ul class="list-unstyled">
+            {% for experience in page.experience %}
+                <li>{{experience}}</li>
+            {% endfor %}
+        </ul>
     </div>
+
+    <!-- Organization -->
+    <div class="row">
+        <h3>Organization</h3>
+        <ul class="list-unstyled">
+            {% for organization in page.organization %}
+                <li>{{organization}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
 </div>

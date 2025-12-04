@@ -64,12 +64,28 @@ layout: default
         {% endfor %}
     </ul>
 </div>
-
-<!-- Bio -->
+<!-- experience -->
 <div class="row mt-4">
-    <h3>Bio</h3>
-    {{ member.content }}
+    <h3>Experience</h3>
+    <ul class="list-unstyled">
+        {% for experience in member.experience %}
+            <li>{{experience}}</li>
+        {% endfor %}
+    </ul>
 </div>
+
+<!-- Organization -->
+<div class="row mt-4">
+    <h3>Organization</h3>
+    <ul class="list-unstyled">
+        {% for organization in member.organization %}
+            <li>{{organization}}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
 {% endif %}
 
 {{ content }}

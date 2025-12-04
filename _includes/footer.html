@@ -1,0 +1,11 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ '/js/bootstrap.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+
+<!-- Optional: initialize Bootstrap components if needed -->
+<script>
+	(function($){
+		$(function(){
+			$('.carousel').carousel({ interval: 5000, pause: 'hover' });
+		});
+	})(jQuery);
+</script>

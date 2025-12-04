@@ -1,0 +1,145 @@
+---
+title: "Achievement"
+layout: default
+excerpt: "Awards and achievements"
+sitemap: false
+permalink: /achievement/
+---
+
+<h1>{{ page.title }}</h1>
+
+{%- assign awards = site.data.ach | sort: 'date' | reverse -%}
+{%- assign years = awards | group_by: 'year' -%}
+
+{% for year_group in years %}
+  {%- assign year_idx = forloop.index -%}
+  <h2>{{ year_group.name }}</h2>
+  <ul class="list-unstyled">
+    {% for award in year_group.items %}
+      <li class="media mb-4">
+        <div class="media-body">
+          <h4 class="mt-0 mb-1">{{ award.title }}</h4>
+          <p><small>{{ award.date }} — {{ award.organization }}</small></p>
+          <p>{{ award.description }}</p>
+
+          {% if award.attachments %}
+            <p>
+              <strong>Attachments:</strong>
+              <button type="button" class="btn btn-sm btn-primary view-attachments-btn" data-attachments='{{ award.attachments | jsonify | strip_newlines | replace: '"', '&quot;' }}'>
+                View attachments
+              </button>
+            </p>
+          {% endif %}
+
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+<!-- Overlay for attachments (custom lightbox) -->
+<style>
+  .ach-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:1050;display:none;align-items:center;justify-content:center}
+  .ach-overlay-backdrop{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.7)}
+  .ach-overlay-content{position:relative;z-index:1060;display:flex;flex-direction:column;align-items:stretch;max-width:900px;width:90%;max-height:90%;background:#fff;padding:15px;overflow:hidden;border-radius:4px}
+  .ach-carousel{position:relative;display:flex;align-items:center;justify-content:center;flex:1}
+  .ach-slide-container{width:100%;height:60vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .ach-slide{display:none;min-width:100%;min-height:100%;align-items:center;justify-content:center}
+  .ach-slide img{max-width:100%;max-height:100%}
+  .ach-slide.active{display:flex}
+  .ach-prev,.ach-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.4);color:#fff;border:none;padding:10px;cursor:pointer;z-index:1070}
+  .ach-prev{left:5px}
+  .ach-next{right:5px}
+  .ach-close{position:absolute;top:8px;right:12px;background:transparent;border:none;font-size:28px;cursor:pointer;z-index:1080;color:#333}
+  .ach-files{margin-top:10px;max-height:150px;overflow:auto}
+  .ach-files ul{margin:0;padding-left:20px}
+</style>
+
+<div id="ach-overlay" class="ach-overlay">
+  <div class="ach-overlay-backdrop"></div>
+  <div class="ach-overlay-content">
+    <button class="ach-close" aria-label="Close">&times;</button>
+    <div class="ach-carousel">
+      <button class="ach-prev" aria-label="Previous">&#10094;</button>
+      <div class="ach-slide-container"></div>
+      <button class="ach-next" aria-label="Next">&#10095;</button>
+    </div>
+    <div class="ach-files"></div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var BASE = '{{ site.baseurl }}';
+    function withBase(path){ return (BASE === '' ? '/' + path : BASE + '/' + path); }
+
+    var overlay = document.getElementById('ach-overlay');
+    var backdrop = overlay.querySelector('.ach-overlay-backdrop');
+    var closeBtn = overlay.querySelector('.ach-close');
+    var slideContainer = overlay.querySelector('.ach-slide-container');
+    var filesContainer = overlay.querySelector('.ach-files');
+    var prevBtn = overlay.querySelector('.ach-prev');
+    var nextBtn = overlay.querySelector('.ach-next');
+    var currentIndex = 0;
+    var images = [];
+
+    function openOverlay(atts){
+      images = atts.filter(function(a){return /\.(png|jpe?g|gif)$/i.test(a)});
+      var files = atts.filter(function(a){return !/\.(png|jpe?g|gif)$/i.test(a)});
+
+      // build slides
+      slideContainer.innerHTML = '';
+      images.forEach(function(img, idx){
+        var slide = document.createElement('div');
+        slide.className = 'ach-slide' + (idx===0? ' active':'');
+        var image = document.createElement('img');
+        image.src = withBase(img);
+        image.alt = '';
+        slide.appendChild(image);
+        slideContainer.appendChild(slide);
+      });
+
+      // files
+      filesContainer.innerHTML = '';
+      if(files.length){
+        var h = document.createElement('p'); h.innerHTML = '<strong>Files</strong>';
+        filesContainer.appendChild(h);
+        var ul = document.createElement('ul');
+        files.forEach(function(f){
+          var li = document.createElement('li');
+          var a = document.createElement('a'); a.href = withBase(f); a.target='_blank'; a.textContent = f.split('/').pop();
+          li.appendChild(a); ul.appendChild(li);
+        });
+        filesContainer.appendChild(ul);
+      }
+
+      currentIndex = 0;
+      overlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeOverlay(){ overlay.style.display='none'; document.body.style.overflow=''; }
+    function showIndex(i){
+      var slides = slideContainer.querySelectorAll('.ach-slide');
+      if(!slides.length) return;
+      if(i<0) i = slides.length-1;
+      if(i>=slides.length) i = 0;
+      slides.forEach(function(s,idx){ s.classList.toggle('active', idx===i); });
+      currentIndex = i;
+    }
+
+    prevBtn.addEventListener('click', function(){ showIndex(currentIndex-1); });
+    nextBtn.addEventListener('click', function(){ showIndex(currentIndex+1); });
+    closeBtn.addEventListener('click', closeOverlay);
+    backdrop.addEventListener('click', closeOverlay);
+    document.addEventListener('keydown', function(e){ if(overlay.style.display!=='none'){ if(e.key==='Escape') closeOverlay(); if(e.key==='ArrowLeft') showIndex(currentIndex-1); if(e.key==='ArrowRight') showIndex(currentIndex+1); }});
+
+    // attach handlers
+    Array.prototype.forEach.call(document.querySelectorAll('.view-attachments-btn'), function(btn){
+      btn.addEventListener('click', function(){
+        var raw = btn.getAttribute('data-attachments') || '[]';
+        try{ raw = raw.replace(/&quot;/g,'"'); var atts = JSON.parse(raw); openOverlay(atts); }catch(e){ console.error('Invalid attachments JSON', e, raw); }
+      });
+    });
+  })();
+</script>

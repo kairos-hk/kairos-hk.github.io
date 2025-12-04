@@ -1,0 +1,26 @@
+- year: 2024
+  date: 2024-10-12
+  title: "Outstanding Research Award"
+  organization: "International Conference on Examples"
+  description: "Received for contributions to example-driven research in computational methods."
+  attachments:
+    - images/awards/poster-2023.png
+    - images/awards/researcher.png
+
+- year: 2023
+  date: 2023-06-05
+  title: "Best Poster Award"
+  organization: "Sample Symposium"
+  description: "Awarded best poster for the project 'Example Systems'."
+  attachments:
+    - images/awards/poster-2023.png
+    - images/awards/researcher.png
+
+- year: 2022
+  date: 2022-11-20
+  title: "Young Researcher Prize"
+  organization: "Example Foundation"
+  description: "Recognized as a promising early-career researcher for work on sample applications."
+  attachments:
+    - images/awards/poster-2023.png
+    - images/awards/researcher.png

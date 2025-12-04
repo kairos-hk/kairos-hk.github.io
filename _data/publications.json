@@ -1,40 +1,91 @@
 [
 	{
-		"id": "http://zotero.org/groups/2386072/items/NU9LTX7C",
+		"id": "urn:doi:10.3745/PKIPS.y2025m11a.296",
 		"type": "article-journal",
-		"title": "Segmentation of Nuclei in Histopathology Images by Deep Regression of the Distance Map",
-		"container-title": "IEEE Transactions on Medical Imaging",
-		"page": "448-459",
-		"volume": "38",
-		"issue": "2",
-		"source": "IEEE Xplore",
-		"abstract": "The advent of digital pathology provides us with the challenging opportunity to automatically analyze whole slides of diseased tissue in order to derive quantitative profiles that can be used for diagnosis and prognosis tasks. In particular, for the development of interpretable models, the detection and segmentation of cell nuclei is of the utmost importance. In this paper, we describe a new method to automatically segment nuclei from Haematoxylin and Eosin (H&E) stained histopathology data with fully convolutional networks. In particular, we address the problem of segmenting touching nuclei by formulating the segmentation problem as a regression task of the distance map. We demonstrate superior performance of this approach as compared to other approaches using Convolutional Neural Networks.",
-		"DOI": "10.1109/TMI.2018.2865709",
+		"title": "Side-Channel Scenarios and Countermeasures for National Information Warfare",
+		"container-title": "Korea Information Processing Society ACK 2025",
+		"page": "296-297",
+		"source": "Korea Information Processing Society ACK 2025",
+		"abstract": "Hardware side-channel attacks exploit unintended physical signals leaked by devices (power consumption, electromagnetic emissions, computation timing, etc.) to extract confidential information. This paper presents two side-channel scenarios that are practically applicable in state-level information warfare: remote electromagnetic (EM) eavesdropping and power analysis through supply-chain intervention. It compares and analyzes each scenario’s success conditions, risk level, detectability, and mitigation requirements. It also proposes integrated technical and policy countermeasures including shielding, side-channel mitigation techniques, and strengthened supply-chain security and discusses directions for future experimental validation and response.",
+		"DOI": "10.3745/PKIPS.y2025m11a.296",
 		"author": [
-			{
-				"family": "Naylor",
-				"given": "P."
-			},
-			{
-				"family": "Laé",
-				"given": "M."
-			},
-			{
-				"family": "Reyal",
-				"given": "F."
-			},
-			{
-				"family": "Walter",
-				"given": "T."
-			}
+			{ "family": "Dong-young Kim" }
 		],
-		"issued": {
-			"date-parts": [
-				[
-					"2019",
-					2
-				]
-			]
-		}
+		"issued": { "date-parts": [["2025", 11]] }
+	},
+	{
+		"id": "urn:doi:10.1000/example2",
+		"type": "article-journal",
+		"title": "Supplementary Evidence Forensics in Portable Operating Systems with Cold Boot Attack Based Memory Acquisition",
+		"container-title": "The 20th Asia Pacific International Conference on Information Science and Technology (APIC-IST 2025)",
+		"source": "The 20th Asia Pacific International Conference on Information Science and Technology (APIC-IST 2025)",
+		"abstract": "Portable operating systems (Portable OS) pose significant challenges to traditional digital forensic methods due to their nonpersistent architecture and RAM-based operation. This study proposes a memory forensics methodology utilizing Cold Boot Attacks (CBA) to overcome these limitations. Experiments were conducted using a DDR3-based system running Puppy Linux, where physical memory was acquired through CBA. By addressing the scrambling mechanism present in DDR3 architecture, volatile artifacts such as user-generated plaintext strings were successfully recovered. The legal admissibility of the acquired memory evidence was assessed in accordance with the IBA Rules on the Taking of Evidence in International Arbitration. This evaluation highlights the importance of procedural integrity and the need for explicit proof of data loss risks inherent in CBA-based acquisition. The findings of this study offer a technically feasible and legally grounded solution to bridge forensic gaps in Portable OS environments, contributing to practical applications in digital forensic investigations.",
+		"DOI": "10.1000/example2",
+		"author": [
+			{ "family": "Dong-young Kim" }
+		],
+		"issued": { "date-parts": [["2025", 7]] }
+	},
+	{
+		"id": "urn:doi:kcs2024",
+		"type": "Proceedings",
+		"title": "Optimization Trends for Applying Post-Quantum Cryptography in Low-Spec Environments",
+		"container-title": "Korean Institute of Information Scientists and Engineers (KSC 2024)",
+		"page": "1,647 - 1,649",
+		"source": "Korean Institute of Information Scientists and Engineers (KSC 2024)",
+		"abstract": "Quantum computers can break public-key cryptosystems such as RSA using Shor’s algorithm, creating an urgent need to deploy post-quantum cryptography (PQC). However, PQC typically requires substantial computational and memory resources, making it difficult to apply in low-specification or resource-constrained environments. Consequently, extensive research has focused on optimization techniques, and there is a need to summarize the overall direction of this work and its limitations. This study analyzes current trends in PQC optimization research. Representative approaches include: (1) FPGA-based acceleration using high-level synthesis (HLS), (2) memory optimization through offloading and streaming, (3) multiplication-operation optimizations, (4) techniques leveraging data characteristics such as sparsity, (5) GPU-based parallel processing, and (6) hardware-specific optimizations. We examine the characteristics and goals of these techniques. Such optimization strategies enable lightweight implementations of PQC, demonstrating feasibility even in low-resource environments with limited memory or computational capacity. However, our analysis shows that most low-resource optimization studies evaluate performance on platforms that still exceed the actual constraints of IoT-level devices. These findings highlight the importance of future research targeting even lower-specification environments for PQC deployment.",
+		"author": [
+			{ "family": "Jeongsik", "given": "P." },
+			{ "family": "Gyungtae", "given": "M." },
+			{ "family": "Dongyoung", "given": "K." },
+			{ "family": "Boyeon", "given": "K." },
+			{ "family": "Wonyoung", "given": "O." },
+			{ "family": "Jinyoung", "given": "K." },
+			{ "family": "Juseong", "given": "H." },
+			{ "family": "Kisoon", "given": "Y." }
+		],
+		"issued": { "date-parts": [["2024", 12, 18]] }
+	},
+	{
+		"id": "urn:doi:10.1000/example4",
+		"type": "article-journal",
+		"title": "Transfer Learning for Histopathology",
+		"container-title": "Medical Image Analysis",
+		"page": "33-45",
+		"volume": "27",
+		"issue": "2",
+		"source": "MedIA",
+		"abstract": "We study transfer learning strategies to adapt natural-image pretrained models to histopathology datasets.",
+		"DOI": "10.1000/example4",
+		"author": [ { "family": "Chen", "given": "L." }, { "family": "Wong", "given": "A." } ],
+		"issued": { "date-parts": [["2017", 11, 20]] }
+	},
+	{
+		"id": "urn:doi:10.1000/example5",
+		"type": "article-journal",
+		"title": "Evaluating Distance-map Regression Methods in Biomedical Imaging",
+		"container-title": "IEEE Transactions on Biomedical Engineering",
+		"page": "10-22",
+		"volume": "66",
+		"issue": "7",
+		"source": "IEEE Xplore",
+		"abstract": "A comparative study of distance-map regression approaches for segmentation tasks.",
+		"DOI": "10.1000/example5",
+		"author": [ { "family": "Anderson", "given": "D." } ],
+		"issued": { "date-parts": [["2016", 7, 12]] }
+	},
+	{
+		"id": "urn:doi:10.1000/example6",
+		"type": "article-journal",
+		"title": "Robust Nuclei Detection with Ensemble Learning",
+		"container-title": "Pattern Recognition Letters",
+		"page": "77-86",
+		"volume": "89",
+		"issue": "",
+		"source": "PRL",
+		"abstract": "Ensembles of simple models can provide robust nuclei detection across staining variations.",
+		"DOI": "10.1000/example6",
+		"author": [ { "family": "Zhang", "given": "Y." } ],
+		"issued": { "date-parts": [["2015", 5, 30]] }
 	}
 ]
