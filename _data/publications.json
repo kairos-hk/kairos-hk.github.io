@@ -1,91 +1,316 @@
 [
-	{
-		"id": "urn:doi:10.3745/PKIPS.y2025m11a.296",
-		"type": "article-journal",
-		"title": "Side-Channel Scenarios and Countermeasures for National Information Warfare",
-		"container-title": "Korea Information Processing Society ACK 2025",
-		"page": "296-297",
-		"source": "Korea Information Processing Society ACK 2025",
-		"abstract": "Hardware side-channel attacks exploit unintended physical signals leaked by devices (power consumption, electromagnetic emissions, computation timing, etc.) to extract confidential information. This paper presents two side-channel scenarios that are practically applicable in state-level information warfare: remote electromagnetic (EM) eavesdropping and power analysis through supply-chain intervention. It compares and analyzes each scenario’s success conditions, risk level, detectability, and mitigation requirements. It also proposes integrated technical and policy countermeasures including shielding, side-channel mitigation techniques, and strengthened supply-chain security and discusses directions for future experimental validation and response.",
-		"DOI": "10.3745/PKIPS.y2025m11a.296",
-		"author": [
-			{ "family": "Dong-young Kim" }
-		],
-		"issued": { "date-parts": [["2025", 11]] }
-	},
-	{
-		"id": "urn:doi:10.1000/example2",
-		"type": "article-journal",
-		"title": "Supplementary Evidence Forensics in Portable Operating Systems with Cold Boot Attack Based Memory Acquisition",
-		"container-title": "The 20th Asia Pacific International Conference on Information Science and Technology (APIC-IST 2025)",
-		"source": "The 20th Asia Pacific International Conference on Information Science and Technology (APIC-IST 2025)",
-		"abstract": "Portable operating systems (Portable OS) pose significant challenges to traditional digital forensic methods due to their nonpersistent architecture and RAM-based operation. This study proposes a memory forensics methodology utilizing Cold Boot Attacks (CBA) to overcome these limitations. Experiments were conducted using a DDR3-based system running Puppy Linux, where physical memory was acquired through CBA. By addressing the scrambling mechanism present in DDR3 architecture, volatile artifacts such as user-generated plaintext strings were successfully recovered. The legal admissibility of the acquired memory evidence was assessed in accordance with the IBA Rules on the Taking of Evidence in International Arbitration. This evaluation highlights the importance of procedural integrity and the need for explicit proof of data loss risks inherent in CBA-based acquisition. The findings of this study offer a technically feasible and legally grounded solution to bridge forensic gaps in Portable OS environments, contributing to practical applications in digital forensic investigations.",
-		"DOI": "10.1000/example2",
-		"author": [
-			{ "family": "Dong-young Kim" }
-		],
-		"issued": { "date-parts": [["2025", 7]] }
-	},
-	{
-		"id": "urn:doi:kcs2024",
-		"type": "Proceedings",
-		"title": "Optimization Trends for Applying Post-Quantum Cryptography in Low-Spec Environments",
-		"container-title": "Korean Institute of Information Scientists and Engineers (KSC 2024)",
-		"page": "1,647 - 1,649",
-		"source": "Korean Institute of Information Scientists and Engineers (KSC 2024)",
-		"abstract": "Quantum computers can break public-key cryptosystems such as RSA using Shor’s algorithm, creating an urgent need to deploy post-quantum cryptography (PQC). However, PQC typically requires substantial computational and memory resources, making it difficult to apply in low-specification or resource-constrained environments. Consequently, extensive research has focused on optimization techniques, and there is a need to summarize the overall direction of this work and its limitations. This study analyzes current trends in PQC optimization research. Representative approaches include: (1) FPGA-based acceleration using high-level synthesis (HLS), (2) memory optimization through offloading and streaming, (3) multiplication-operation optimizations, (4) techniques leveraging data characteristics such as sparsity, (5) GPU-based parallel processing, and (6) hardware-specific optimizations. We examine the characteristics and goals of these techniques. Such optimization strategies enable lightweight implementations of PQC, demonstrating feasibility even in low-resource environments with limited memory or computational capacity. However, our analysis shows that most low-resource optimization studies evaluate performance on platforms that still exceed the actual constraints of IoT-level devices. These findings highlight the importance of future research targeting even lower-specification environments for PQC deployment.",
-		"author": [
-			{ "family": "Jeongsik", "given": "P." },
-			{ "family": "Gyungtae", "given": "M." },
-			{ "family": "Dongyoung", "given": "K." },
-			{ "family": "Boyeon", "given": "K." },
-			{ "family": "Wonyoung", "given": "O." },
-			{ "family": "Jinyoung", "given": "K." },
-			{ "family": "Juseong", "given": "H." },
-			{ "family": "Kisoon", "given": "Y." }
-		],
-		"issued": { "date-parts": [["2024", 12, 18]] }
-	},
-	{
-		"id": "urn:doi:10.1000/example4",
-		"type": "article-journal",
-		"title": "Transfer Learning for Histopathology",
-		"container-title": "Medical Image Analysis",
-		"page": "33-45",
-		"volume": "27",
-		"issue": "2",
-		"source": "MedIA",
-		"abstract": "We study transfer learning strategies to adapt natural-image pretrained models to histopathology datasets.",
-		"DOI": "10.1000/example4",
-		"author": [ { "family": "Chen", "given": "L." }, { "family": "Wong", "given": "A." } ],
-		"issued": { "date-parts": [["2017", 11, 20]] }
-	},
-	{
-		"id": "urn:doi:10.1000/example5",
-		"type": "article-journal",
-		"title": "Evaluating Distance-map Regression Methods in Biomedical Imaging",
-		"container-title": "IEEE Transactions on Biomedical Engineering",
-		"page": "10-22",
-		"volume": "66",
-		"issue": "7",
-		"source": "IEEE Xplore",
-		"abstract": "A comparative study of distance-map regression approaches for segmentation tasks.",
-		"DOI": "10.1000/example5",
-		"author": [ { "family": "Anderson", "given": "D." } ],
-		"issued": { "date-parts": [["2016", 7, 12]] }
-	},
-	{
-		"id": "urn:doi:10.1000/example6",
-		"type": "article-journal",
-		"title": "Robust Nuclei Detection with Ensemble Learning",
-		"container-title": "Pattern Recognition Letters",
-		"page": "77-86",
-		"volume": "89",
-		"issue": "",
-		"source": "PRL",
-		"abstract": "Ensembles of simple models can provide robust nuclei detection across staining variations.",
-		"DOI": "10.1000/example6",
-		"author": [ { "family": "Zhang", "given": "Y." } ],
-		"issued": { "date-parts": [["2015", 5, 30]] }
-	}
+  {
+    "id": "agentcardleak-2026",
+    "type": "paper-conference",
+    "title": "AgentCardLeak: Inferring User Intent from AI-Agent Discovery Metadata",
+    "container-title": "IEEE International Conference on Computer Communication and the Internet (ICCCI 2026)",
+    "kind": "Oral presentation",
+    "date_label": "June 27, 2026",
+    "author": [
+      {
+        "given": "Dongyoung",
+        "family": "Kim"
+      }
+    ],
+    "collaborators": true,
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          27
+        ]
+      ]
+    },
+    "abstract": "Studied user-intent leakage through AI-agent discovery metadata across eight task classes, three planners, and five visibility levels. Fine capability metadata reached 60.9% cross-planner accuracy against a 12.5% random baseline. Capability coarsening reduced the privacy-only result to 23.7%, and a combined defense reached 20.3% at 2.58× overhead.",
+    "heading_ko": "AI 에이전트 메타데이터와 사용자 프라이버시",
+    "short_venue": "IEEE ICCCI 2026",
+    "category": "paper",
+    "kind_ko": "학회 구두 발표",
+    "summary_ko": "에이전트를 검색할 때 노출되는 기능 정보만으로 사용자 의도가 얼마나 드러나는지 분석했습니다. 서로 다른 플래너 간 평가에서 추론 정확도는 60.9%였으며, 정보 단순화와 결합 방어로 노출을 줄였습니다."
+  },
+  {
+    "id": "smaug-t-lea-cubesat-2026",
+    "type": "manuscript",
+    "title": "SMAUG-T–LEA Post-Quantum Secure Communications for an 8-bit AVR-Based CubeSat under an 8 KB SRAM Constraint",
+    "container-title": "National Cryptography Competition",
+    "kind": "Competition manuscript",
+    "date_label": "2026",
+    "author": [
+      {
+        "given": "Dongyoung",
+        "family": "Kim"
+      }
+    ],
+    "collaborators": true,
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "abstract": "Presented a hybrid post-quantum and lightweight-encryption design for constrained telemetry and command links, with implementation-level memory optimization and stratospheric flight validation.",
+    "heading_ko": "8 KB 메모리 제약에서 구현한 위성 양자내성 암호",
+    "short_venue": "National Cryptography Competition",
+    "category": "other",
+    "kind_ko": "공모전 원고",
+    "summary_ko": "SMAUG-T와 LEA를 결합해 메모리가 제한된 위성 통신을 보호하는 설계를 제안했습니다. 메모리 최적화와 성층권 비행 검증 결과를 정리했습니다."
+  },
+  {
+    "id": "side-channel-information-warfare-2025",
+    "type": "paper-conference",
+    "title": "Side-Channel Scenarios and Countermeasures for National Information Warfare",
+    "container-title": "Annual Conference of the Korea Information Processing Society (ACK 2025)",
+    "kind": "Oral paper presentation",
+    "date_label": "November 7, 2025",
+    "author": [
+      {
+        "given": "Dongyoung",
+        "family": "Kim"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          11,
+          7
+        ]
+      ]
+    },
+    "DOI": "10.3745/PKIPS.y2025m11a.296",
+    "abstract": "Analyzed electromagnetic and supply-chain side-channel risks by comparing feasibility, risk, detectability, and mitigation. Proposed technical and policy responses covering shielding, side-channel-resistant implementations, monitoring, and supply-chain assurance.",
+    "heading_ko": "국가 정보전에서의 부채널 위협과 대응",
+    "short_venue": "ACK 2025",
+    "category": "paper",
+    "kind_ko": "학회 논문 · 구두 발표",
+    "summary_ko": "기기의 전자기·전력 신호가 국가 정보보안에 미치는 위험을 비교했습니다. 차폐, 안전한 구현, 모니터링과 공급망 관리 등 기술·정책 대응을 제안했습니다."
+  },
+  {
+    "id": "codegate-side-channels-2025",
+    "type": "speech",
+    "title": "Side-Channel Attacks: Utility and Versatile Applications",
+    "container-title": "CODEGATE 2025 Global Security Conference",
+    "kind": "Invited conference talk",
+    "date_label": "July 11, 2025",
+    "author": [
+      {
+        "given": "Dongyoung",
+        "family": "Kim"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          7,
+          11
+        ]
+      ]
+    },
+    "abstract": "Presented research on power, timing, electromagnetic, and memory-related side channels, connecting physical leakage to cryptographic and forensic risks. Discussed AI-assisted side-channel and forensic analysis.",
+    "heading_ko": "부채널 보안의 활용과 확장",
+    "short_venue": "CODEGATE 2025",
+    "category": "talk",
+    "kind_ko": "초청 강연",
+    "summary_ko": "전력·시간·전자기·메모리 관련 부채널 연구를 소개하고, 물리적 정보 누출이 암호와 포렌식에 미치는 영향을 설명했습니다."
+  },
+  {
+    "id": "portable-os-forensics-2025",
+    "type": "paper-conference",
+    "title": "Supplementary Evidence Forensics in Portable Operating Systems with Cold Boot Attack Based Memory Acquisition",
+    "container-title": "20th Asia Pacific International Conference on Information Science and Technology (APIC-IST 2025)",
+    "kind": "Oral presentation",
+    "date_label": "June 22, 2025",
+    "author": [
+      {
+        "given": "Dongyoung",
+        "family": "Kim"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          22
+        ]
+      ]
+    },
+    "award": "KSII Young Scientist Award",
+    "abstract": "Examined volatile-memory acquisition for non-persistent, RAM-based portable operating systems, including DDR3 scrambling and recovery of user-generated artifacts. Considered evidentiary admissibility under the IBA Rules on the Taking of Evidence in International Arbitration.",
+    "heading_ko": "포터블 운영체제의 휘발성 메모리 포렌식",
+    "short_venue": "APIC-IST 2025",
+    "category": "paper",
+    "kind_ko": "학회 구두 발표",
+    "summary_ko": "RAM 기반 운영체제에서 사라지기 쉬운 증거를 확보하는 방법을 연구했습니다. 메모리 데이터 복구와 함께, 국제중재에서의 증거 적격성과 절차적 신뢰성도 검토했습니다."
+  },
+  {
+    "id": "pqc-optimization-2024",
+    "type": "paper-conference",
+    "title": "Optimization Trends for Applying Post-Quantum Cryptography in Low-Resource Environments",
+    "container-title": "2024 Korea Software Congress (KSC 2024)",
+    "kind": "Conference paper",
+    "date_label": "December 19, 2024",
+    "page": "1647–1649",
+    "author": [
+      {
+        "given": "Jeongsik",
+        "family": "Park"
+      },
+      {
+        "given": "Kyungtae",
+        "family": "Moon"
+      },
+      {
+        "given": "Dongyoung",
+        "family": "Kim"
+      },
+      {
+        "given": "Boyeon",
+        "family": "Kwon"
+      },
+      {
+        "given": "Wonyoung",
+        "family": "Oh"
+      },
+      {
+        "given": "Jinyoung",
+        "family": "Kim"
+      },
+      {
+        "given": "Joosung",
+        "family": "Han"
+      },
+      {
+        "given": "Gisoon",
+        "family": "Yun"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          12,
+          19
+        ]
+      ]
+    },
+    "award": "Undergraduate Outstanding Paper Award",
+    "abstract": "Surveyed FPGA/HLS acceleration, offloading and streaming, multiplication optimization, sparsity-aware methods, GPU parallelism, and hardware-specific optimization. Identified a gap between nominally constrained experimental platforms and practical low-end IoT limits.",
+    "heading_ko": "저자원 환경의 양자내성 암호 최적화 동향",
+    "short_venue": "KSC 2024",
+    "category": "paper",
+    "kind_ko": "학회 논문",
+    "summary_ko": "하드웨어 가속, 스트리밍, 연산 최적화 등 양자내성 암호의 경량화 연구를 분석했습니다. 실험 플랫폼과 실제 저사양 IoT 기기 사이의 자원 격차를 지적했습니다."
+  },
+  {
+    "id": "avr-pqc-guide-2024",
+    "type": "report",
+    "title": "Implementation Guide for Lattice-Based PQC Algorithms on AVR 8-bit",
+    "container-title": "Best of the Best, Korea Information Technology Research Institute",
+    "kind": "Technical implementation guide",
+    "date_label": "December 14, 2024",
+    "author": [
+      {
+        "given": "Dongyoung",
+        "family": "Kim"
+      }
+    ],
+    "collaborators": true,
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          12,
+          14
+        ]
+      ]
+    },
+    "abstract": "Documented implementation and optimization lessons from porting SMAUG-T to AVR 8-bit hardware, with guidance applicable to TiMER-family post-quantum cryptography.",
+    "heading_ko": "AVR 8-bit에서의 격자 기반 암호 구현 가이드",
+    "short_venue": "BoB · KITRI",
+    "category": "other",
+    "kind_ko": "기술 구현 가이드",
+    "summary_ko": "SMAUG-T를 AVR 8-bit 하드웨어에 이식하며 얻은 구현·최적화 경험을 문서화했습니다. TiMER 계열 양자내성 암호에도 적용할 수 있는 지침을 정리했습니다."
+  },
+  {
+    "id": "wear-os-forensics-2024",
+    "type": "paper-conference",
+    "title": "Identifying Forensic Artifacts in Smartwatches through Wear OS AVD",
+    "container-title": "Proceedings of the 2024 KIIT Fall Conference",
+    "kind": "Conference paper",
+    "date_label": "November 22, 2024",
+    "page": "570–572",
+    "author": [
+      {
+        "given": "Dongyoung",
+        "family": "Kim"
+      },
+      {
+        "given": "Changyeon",
+        "family": "Park"
+      },
+      {
+        "given": "Jinwoo",
+        "family": "Yoo"
+      },
+      {
+        "given": "Seongyoon",
+        "family": "Nam"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          11,
+          22
+        ]
+      ]
+    },
+    "award": "Outstanding Paper Award",
+    "abstract": "Acquired and analyzed Wear OS firmware through Android Virtual Device images. Categorized call, message, contact, and newly identified financial-related artifacts for smartwatch investigations.",
+    "heading_ko": "Wear OS 스마트워치의 포렌식 아티팩트",
+    "short_venue": "KIIT Fall Conference 2024",
+    "category": "paper",
+    "kind_ko": "학회 논문",
+    "summary_ko": "Wear OS 가상 기기 이미지를 분석해 통화, 메시지, 연락처 및 금융 관련 흔적을 분류했습니다. 스마트워치 수사에 활용할 수 있는 증거 항목을 정리했습니다."
+  },
+  {
+    "id": "automl-qshing-2024",
+    "type": "article-journal",
+    "title": "AutoML-Based Malicious URL Classification and Service Implementation for Detecting Qshing Attacks",
+    "container-title": "Smart Media Journal",
+    "kind": "Journal article",
+    "date_label": "2024",
+    "volume": "13",
+    "issue": "6",
+    "page": "9–15",
+    "author": [
+      {
+        "given": "Dongyoung",
+        "family": "Kim"
+      },
+      {
+        "given": "Gi-Seong",
+        "family": "Hwang"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "DOI": "10.30693/SMJ.2024.13.6.9",
+    "abstract": "Built a dataset of 128,587 malicious and 428,102 benign URLs, extracted 35 protocol and structure features, and used AutoML to achieve approximately 87.37% classification accuracy. Integrated the classifier with a QR-reader prototype.",
+    "heading_ko": "AutoML로 탐지하는 QR코드 피싱",
+    "short_venue": "Smart Media Journal",
+    "category": "paper",
+    "kind_ko": "학술지 논문",
+    "summary_ko": "악성 URL 128,587개와 정상 URL 428,102개에서 35개 특징을 추출했습니다. AutoML 분류기는 약 87.37% 정확도를 보였으며, QR 리더 시제품과 통합했습니다."
+  }
 ]

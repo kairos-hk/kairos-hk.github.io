@@ -1,11 +1,10 @@
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="{{ '/js/bootstrap.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>
-
-<!-- Optional: initialize Bootstrap components if needed -->
-<script>
-	(function($){
-		$(function(){
-			$('.carousel').carousel({ interval: 5000, pause: 'hover' });
-		});
-	})(jQuery);
-</script>
+<footer id="footer" class="panel site-footer">
+  <div class="panel-footer">
+    <div class="container-fluid"><div class="row">
+      <div class="col-sm-4"><p>© {{ site.time | date: '%Y' }} Dongyoung Kim.<br>Built with <a href="https://jekyllrb.com/">Jekyll</a>, based on the <a href="https://www.allanlab.org/aboutwebsite.html">Allan Lab template</a>.</p><p><a href="{{ site.data.profile.social.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="{{ site.data.profile.social.github }}" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="{{ site.data.profile.social.orcid }}" target="_blank" rel="noopener noreferrer">ORCID</a></p></div>
+      <div class="col-sm-4"><p>Undergraduate at KAIST.<br>Founder &amp; CEO of<br>PatchOne Industries Inc.</p><p>Daejeon, Republic of Korea</p></div>
+      <div class="col-sm-4"><p>Contact:<br><a href="mailto:{{ site.email }}">{{ site.email }}</a><br>Research &amp; academic inquiries</p><p><a href="mailto:ceo.dykim@patchone.dev">ceo.dykim@patchone.dev</a><br>PatchOne &amp; business inquiries</p></div>
+    </div></div>
+  </div>
+</footer>
+<script src="{{ '/js/navigation.js' | relative_url }}" defer></script>

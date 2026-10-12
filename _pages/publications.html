@@ -1,61 +1,18 @@
 ---
-title: "Publications"
+title: Publications & Talks
 layout: default
-excerpt: "RT2 Lab -- Publications."
-sitemap: false
+excerpt: "Dongyoung Kim's publications, conference presentations, invited talks, and technical guides in cybersecurity and AI."
 permalink: /publications/
 ---
-
-<h1>{{page.title}}</h1>
-
-<div class="panel-group" id="accordion">
-    <div class="panel panel-default">
-
-    {% for publi in site.data.publications %}
-                <div class="panel-heading">
-                        <a data-toggle="collapse" data-parent="#accordion"
-                             href="#collapse{{forloop.index}}"
-                             style="color: inherit; display:block;">
-                        <!-- authors -->
-                        {% assign authors = "" | split:"/" %}
-                        {% for author in publi.author %}
-                                {% assign authors = authors | push: author.family %}
-                        {% endfor %}
-                        {{ authors | array_to_sentence_string }},
-
-                        <!-- title with link -->
-                        "{{ publi.title }}",
-
-                        <!-- container -->
-                        <b>{{ publi.container-title }}</b>
-
-                        <!-- issued date -->
-                        ({{ publi.issued.date-parts | jsonify | slice: 3,4 }})
-                        </a>
-
-                        {% comment %} Prefer explicit `link` field from JSON; fall back to DOI URL if provided. {% endcomment %}
-                        {% assign pub_link = publi.link | default: '' %}
-                        {% if pub_link == '' and publi.DOI %}
-                            {% assign pub_link = 'https://doi.org/' | append: publi.DOI %}
-                        {% endif %}
-
-                        {% if pub_link != '' %}
-                            <a class="btn btn-xs btn-link" href="{{ pub_link }}" target="_blank" style="margin-left:8px;">External</a>
-                        {% elsif publi.DOI %}
-                            <span class="text-muted" style="margin-left:8px;">DOI: {{ publi.DOI }}</span>
-                        {% endif %}
-                </div>
-
-        <div id="collapse{{forloop.index}}" class="panel-collapse collapse in">
-            <div class="panel-body">
-                <p>{{ publi.abstract }}</p>
-
-                     {% if pub_link != '' %}
-                     <a class="btn btn-outline-primary" href="{{ pub_link }}"
-                         role="button" target="_blank">Link</a>
-                     {% endif %}
-            </div>
-        </div>
-    {% endfor %}
-    </div>
-</div>
+<header class="page-heading"><h1>Publications &amp; Talks</h1><p>Publications, conference presentations, invited talks, manuscripts, and technical guides.</p></header>
+<div class="archive-tools" data-publication-tools hidden><div class="filter-buttons" role="group" aria-label="Publication type"><button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button><button class="filter-button" type="button" data-filter="paper" aria-pressed="false">Papers &amp; Presentations</button><button class="filter-button" type="button" data-filter="talk" aria-pressed="false">Talks</button><button class="filter-button" type="button" data-filter="other" aria-pressed="false">Manuscripts &amp; Guides</button></div><div class="search-field"><label class="visually-hidden" for="publication-search">Search by title, topic, or year</label><input id="publication-search" type="search" placeholder="Search by title, topic, or year" autocomplete="off"></div></div>
+<p class="results-count" id="results-count" role="status" aria-live="polite">{{ site.data.publications.size }} publications and talks</p>
+<div class="publication-list">{% for publi in site.data.publications %}{% assign pub_year = publi.issued.date-parts[0][0] %}
+<article id="{{ publi.id }}" class="publication" data-publication data-category="{{ publi.category }}">
+  <div class="publication-year">{{ pub_year }}</div>
+  <div><p class="publication-meta">{{ publi.kind }} · {{ publi.short_venue }}</p><h2>{{ publi.title }}</h2><p class="publication-authors">{% for author in publi.author %}{{ author.given }} {{ author.family }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% if publi.collaborators %} and collaborators{% endif %}</p><p>{{ publi.abstract }}</p>{% if publi.award %}<p class="publication-award">{{ publi.award }}</p>{% endif %}
+    {% if publi.DOI %}<p class="publication-actions"><a href="https://doi.org/{{ publi.DOI }}" target="_blank" rel="noopener noreferrer">View publication (DOI)</a></p>{% endif %}
+    <details class="details-block"><summary>Bibliographic details</summary><p><strong>{{ publi.container-title }}</strong><br>{{ publi.kind }} · {{ publi.date_label }}{% if publi.page %} · pp. {{ publi.page }}{% endif %}{% if publi.volume %} · Vol. {{ publi.volume }}{% endif %}{% if publi.issue %}, No. {{ publi.issue }}{% endif %}</p></details>
+  </div>
+</article>{% endfor %}</div>
+<p class="empty-state" id="publication-empty" hidden>No matching publications. Try another search term or publication type.</p>

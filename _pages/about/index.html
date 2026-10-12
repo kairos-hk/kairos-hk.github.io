@@ -1,88 +1,16 @@
 ---
-title: "About"
+title: About
 layout: default
-excerpt: "RT2 Lab: About"
-sitemap: false
+excerpt: "Education, experience, teaching, community service, and entrepreneurship activities of Dongyoung Kim."
 permalink: /about/
 ---
-
-<h1>{{page.title}}</h1>
-
-{% assign member = site.posts | where: 'permalink', 'about/researcher-name' | first %}
-{% if member %}
-<div class="card team-member-card">
-    <div class="row mt-3">
-        <div class="col-md-3 text-center">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.image }}"
-                class="img-circle img-responsive"
-                style="filter: grayscale(100%); max-width: 200px;"/>
-        </div>
-
-        <div class="col-md-9">
-            <div class="card-body">
-                <h2 class="card-title">{{ member.title }}</h2>
-                <h4 class="card-text">{{ member.role }}</h4>
-                
-                <!-- Social -->
-                <ul class="list-inline list-unstyled">
-                    <!-- Linkedin -->
-                    {% if member.social.linkedin %}
-                        <li><a target="blank" href="{{member.social.linkedin}}"><i class="fab fa-linkedin"></i></a></li>
-                    {% endif %}
-                    <!-- Github -->
-                    {% if member.social.github %}
-                        <li><a target="blank" href="{{member.social.github}}"><i class="fab fa-github"></i></a></li>
-                    {% endif %}
-                    <!-- Personal Website -->
-                    {% if member.social.website %}
-                        <li><a target="blank" href="{{member.social.website}}"><i class="fas fa-globe"></i></a></li>
-                    {% endif %}
-                    <!-- Google Scholar -->
-                    {% if member.social.google-scholar %}
-                        <li><a target="blank" href="{{member.social.google-scholar}}"><i class="fab fa-google"></i></a></li>
-                    {% endif %}
-                    <!-- Orcid -->
-                    {% if member.social.orcid %}
-                        <li><a target="blank" href="{{member.social.orcid}}"><i class="fab fa-orcid"></i></a></li>
-                    {% endif %}
-                    <!-- Research Gate -->
-                    {% if member.social.research-gate %}
-                        <li><a target="blank" href="{{member.social.research-gate}}"><i class="fab fa-researchgate"></i></a></li>
-                    {% endif %}
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Education -->
-<div class="row mt-4">
-    <h3>Education</h3>
-    <ul class="list-unstyled">
-        {% for education in member.education %}
-            <li>{{education}}</li>
-        {% endfor %}
-    </ul>
-</div>
-<!-- experience -->
-<div class="row mt-4">
-    <h3>Experience</h3>
-    <ul class="list-unstyled">
-        {% for experience in member.experience %}
-            <li>{{experience}}</li>
-        {% endfor %}
-    </ul>
-</div>
-
-<!-- Organization -->
-<div class="row mt-4">
-    <h3>Organization</h3>
-    <ul class="list-unstyled">
-        {% for organization in member.organization %}
-            <li>{{organization}}</li>
-        {% endfor %}
-    </ul>
-</div>
-
-
-{% endif %}
+<header class="page-heading"><h1>About</h1><p>My education, professional experience, and community activities.</p></header>
+{% include profile.html %}
+<section class="section"><div class="section-title"><h2>Education</h2></div>
+{% for education in site.data.profile.education %}<article class="detail-timeline"><span class="timeline-date">{{ education.period }}</span><div><h3>{{ education.institution }}</h3><p class="role">{{ education.qualification }}</p><p>{{ education.description }}</p></div></article>{% endfor %}</section>
+<section class="section"><div class="section-title"><h2>Experience &amp; Leadership</h2></div>
+{% for experience in site.data.profile.experience %}<article class="detail-timeline"><span class="timeline-date">{{ experience.period }}</span><div><h3>{{ experience.organization }}</h3><p class="role">{{ experience.role }}</p><ul>{% for highlight in experience.highlights %}<li>{{ highlight }}</li>{% endfor %}</ul></div></article>{% endfor %}</section>
+<section class="section" id="teaching-and-service"><div class="section-title"><h2>Talks, Teaching &amp; Community</h2></div>
+<ul class="activity-list">{% for entry in site.data.profile.service %}<li><h3>{{ entry.title }}</h3>{% if entry.period %}<p class="meta">{{ entry.period }}</p>{% endif %}<p>{{ entry.description }}</p></li>{% endfor %}</ul></section>
+<section class="section" id="entrepreneurship"><div class="section-title"><h2>Entrepreneurship &amp; Global Commercialization</h2></div>
+<ul class="activity-list">{% for program in site.data.profile.programs %}<li><h3>{{ program.title }}</h3><p>{{ program.description }}</p></li>{% endfor %}</ul></section>

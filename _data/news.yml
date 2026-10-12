@@ -1,24 +1,87 @@
-- date: 05/09/19
-  title: "Another great thing"
-  tags:
-    - some
-    - tags
-  images:
-    - images/slider/slider-image.png
-    - images/slider/slider-image.png
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Eu turpis egestas pretium aenean. Luctus venenatis lectus magna fringilla
-    urna porttitor. Lorem ipsum dolor sit amet. Pellentesque massa placerat
-    duis ultricies. Commodo viverra maecenas accumsan lacus vel.
-
-- date: 03/09/19
-  title: "Something great"
-  tags:
-    - some
-    - tags
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Eu turpis egestas pretium aenean. Luctus venenatis lectus magna fringilla
-    urna porttitor. Lorem ipsum dolor sit amet. Pellentesque massa placerat
-    duis ultricies. Commodo viverra maecenas accumsan lacus vel.
+---
+- date: '2026'
+  title: KAIST entrepreneurship and cybersecurity recognition
+  content: Received the grand prize at the GRAVITY Startup Competition, won the KAIST-POSTECH
+    Science War Cyber Security Competition, and received an award at the E5 KAIST
+    Startup Competition.
+  date_ko: '2026'
+  title_ko: KAIST 창업·사이버보안 대회 수상
+  content_ko: GRAVITY 창업경진대회 대상, KAIST–POSTECH 사이버보안 경진대회 우승, E5 KAIST 창업경진대회 수상으로
+    연구와 창업 활동을 이어가고 있습니다.
+- date: June 27, 2026
+  title: AgentCardLeak presented at ICCCI 2026
+  content: Delivered an oral presentation on user-intent leakage through AI-agent
+    discovery metadata at the IEEE International Conference on Computer Communication
+    and the Internet.
+  date_ko: 2026.06.27
+  title_ko: ICCCI 2026에서 AgentCardLeak 발표
+  content_ko: AI 에이전트 검색 메타데이터를 통한 사용자 의도 노출 연구를 IEEE ICCCI에서 구두 발표했습니다.
+- date: May 2026
+  title: R&D and AI policy research at the Ministry of Science and ICT
+  content: Began policy research and advisory activities in R&D and artificial intelligence
+    at the Ministry of Science and ICT, Republic of Korea.
+  date_ko: '2026.05'
+  title_ko: 과학기술정보통신부 정책 연구 시작
+  content_ko: 과학기술정보통신부에서 R&D와 인공지능 분야의 정책 연구·자문 활동을 시작했습니다.
+- date: February 2026
+  title: Founded PatchOne Industries Inc.
+  content: Established PatchOne Industries Inc. as founder and CEO, building on venture
+    and product work begun in 2025. The company spans cybersecurity, global compliance
+    automation, and advanced aerospace and defense R&D.
+  date_ko: '2026.02'
+  title_ko: PatchOne Industries 설립
+  content_ko: 2025년에 시작한 사업과 제품 개발을 바탕으로 PatchOne Industries를 설립했습니다. 사이버보안, 글로벌 컴플라이언스
+    자동화와 항공우주·국방 R&D를 추진합니다.
+- date: '2026'
+  title: Started KAIST and MITx DEDP studies
+  content: Entered KAIST's undergraduate Freshman Program and began the MITx MicroMasters
+    Program in Data, Economics, and Design of Policy.
+  date_ko: '2026'
+  title_ko: KAIST 입학 · MITx DEDP 과정 시작
+  content_ko: KAIST 새내기과정에 입학하고, MITx Data, Economics, and Design of Policy MicroMasters
+    과정의 학습을 시작했습니다.
+- date: December 2025
+  title: Korea Talent Award and Gyeongbuk Student Award
+  content: Received the Korea Talent Award, a Minister of Education's Commendation,
+    and the 5th Gyeongbuk Student Award, a Superintendent of Education's Commendation.
+  date_ko: '2025.12'
+  title_ko: 대한민국 인재상 · 경북학생상 수상
+  content_ko: 교육부장관 표창인 대한민국 인재상과 경상북도교육감 표창인 제5회 경북학생상을 받았습니다.
+- date: November 2025
+  title: Grand prize at Hyundai AutoEver White Hat Hacker Competition
+  content: Received the Minister of Education Award as grand prize winner in the Hyundai
+    AutoEver White Hat Hacker Competition.
+  date_ko: '2025.11'
+  title_ko: 현대오토에버 화이트해커 경진대회 대상
+  content_ko: 현대오토에버 화이트해커 경진대회에서 교육부장관상인 대상을 받았습니다.
+- date: November 7, 2025
+  title: Side-channel research presented at ACK 2025
+  content: Presented a paper on side-channel scenarios and countermeasures for national
+    information warfare at the Annual Conference of the Korea Information Processing
+    Society.
+  date_ko: 2025.11.07
+  title_ko: ACK 2025에서 부채널 보안 연구 발표
+  content_ko: 한국정보처리학회에서 국가 정보전에 적용되는 부채널 시나리오와 대응 방안을 발표했습니다.
+- date: July 11, 2025
+  title: Invited research talk at CODEGATE 2025
+  content: 'Delivered “Side-Channel Attacks: Utility and Versatile Applications” at
+    the CODEGATE Global Security Conference.'
+  date_ko: 2025.07.11
+  title_ko: CODEGATE 2025 초청 연구 강연
+  content_ko: CODEGATE 글로벌 보안 컨퍼런스에서 부채널 보안 연구의 활용과 확장을 주제로 강연했습니다.
+- date: June–July 2025
+  title: APIC-IST presentation and KSII Young Scientist Award
+  content: Presented portable-OS memory-forensics research at APIC-IST on June 22
+    and received the KSII Young Scientist Award in July.
+  date_ko: 2025.06 — 07
+  title_ko: APIC-IST 발표 · Young Scientist Award
+  content_ko: 6월 22일 APIC-IST에서 포터블 운영체제 메모리 포렌식 연구를 발표하고, 7월 KSII Young Scientist
+    Award를 받았습니다.
+- date: March 2025
+  title: Completed the BoB 13th cohort
+  content: Completed the Security Product Development Track as project manager for
+    post-quantum secure communications on an AVR 8-bit CubeSat platform with 8 KB
+    SRAM.
+  date_ko: '2025.03'
+  title_ko: BoB 13기 보안제품개발 트랙 수료
+  content_ko: 8 KB SRAM의 AVR 8-bit 큐브위성에서 양자내성 암호 통신을 구현하는 프로젝트를 이끌고 BoB 13기를 수료했습니다.

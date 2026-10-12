@@ -1,129 +1,63 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/dcf3d5d0-a4a4-486f-bd9a-64b612392aad/deploy-status)](https://app.netlify.com/sites/brave-bell-c85a34/deploys)
+# Dongyoung Kim's Portfolio
 
-# Research lab website template
+An English personal academic homepage built with Jekyll, Bootstrap 3, and the original
+Allan Lab / Lumen theme. It covers education,
+professional experience, cybersecurity and AI research, publications and talks,
+entrepreneurship, and honors. Content is based on Dongyoung Kim's CV.
 
-This website is built with [Jekyll](https://jekyllrb.com/).
-It is derived from the great template provided by the
-[Allan Lab](https://www.allanlab.org/aboutwebsite.html), at Leiden University.
+## Local setup
 
-## Setup
+Use a current Ruby installation compatible with the Bundler version recorded in
+`Gemfile.lock` (Ruby 3.3 or newer), then install dependencies:
 
-``` bash
-brew install ruby
-gem install bundler jekyll
-```
-
-Clone this repository, then install the dependencies:
-
-``` bash
+```bash
+gem install bundler -v 2.7.2
 bundle install
 ```
 
-## Run
+Run the local webserver:
 
-Run the local webserver with:
-
-``` bash
+```bash
 bundle exec jekyll serve
 ```
 
-## Contribute
+Verify the site before publishing:
 
-### Add a new member
-
-New members are stored as markdown files under
-[_pages/team/_posts](_pages/team/_posts).
-
-Each new member `.md` file must look like this:
-
-``` yaml
----
-layout: member
-category: staff
-title: Researcher Name
-image: researcher.png
-role: Lab Director
-permalink: 'team/researcher-name'
-social:
-    twitter: https://twitter.com/
-    linkedin: https://www.linkedin.com/
-    google-scholar: https://scholar.google.fr/
-    github: https://github.com/
-    website:
-    orcid: https://orcid.org/
-    research-gate: https://www.researchgate.net/
-education:
- - Education
----
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-cupidatat non proident, sunt in culpa qui officia deserunt
-mollit anim id est laborum.
+```bash
+bundle exec jekyll build --strict_front_matter
+git diff --check
 ```
 
-### Add a new publication
+The generated site is written to `_site/`, which is ignored by Git.
 
-Publications are stored as `.json` file under
-[_data/publications.json](_data/publications.json).
-This json file is exported from [Zotero](https://www.zotero.org/)
-bibliography tool.
+## Updating content
 
-Just add a new entry to the list like this:
+- `_data/profile.yml`: English CV details, social links, education, experience,
+  teaching, community service, and entrepreneurship activities.
+- `_data/publications.json`: publications, conference presentations, talks,
+  manuscripts, and technical guides. Only add a DOI when it is known; specify
+  the output type in `kind` and preserve the precision of the source date.
+  English titles, abstracts, and venue labels are displayed; `category` drives filtering.
+- `_data/ach.yml`: honors and awards, grouped by year in descending order.
+  Keep dates at the precision provided by the source. Add `attachments` only
+  when the files are available.
+- `_data/news.yml`: research, startup, and award updates, with recent entries first.
+- `_pages/home.html` and `_pages/about/index.html`: the home overview and full background.
+- `css/main.scss`: original Bootstrap/Lumen styles and responsive layout adjustments.
+- `css/fonts.css` and `fonts/source-sans-pro-*`: locally hosted Source Sans Pro,
+  the same font used by Allan Lab (OFL license included).
+- `js/navigation.js`: mobile navigation and publication search/type filters.
+- `_pages/contact.html`: research and business contact information.
+- `_config.yml`: site title, contact email, description, and canonical URL.
 
-``` json
-{
-  "id": "http://zotero.org/groups/2386072/items/NU9LTX7C",
-  "type": "article-journal",
-  "title": "Foo",
-  "container-title": "IEEE Transactions on Medical Imaging",
-  "page": "448-459",
-  "volume": "38",
-  "issue": "2",
-  "source": "IEEE Xplore",
-  "abstract": "Bar",
-  "DOI": "10.1109/TMI.2018.2865709",
-  "author": [
-    {
-      "family": "",
-      "given": ""
-    },
-  ],
-  "issued": {
-    "date-parts": [
-      [
-        "2019",
-        2
-      ]
-    ]
-  }
-}
-```
+Activity sections use plain lists rather than cards. Research interests are
+summarized on the homepage; there is no separate Research page.
 
-### Add news
+The original CV is a local reference and is excluded from the generated site.
+The existing portrait is stored in `images/team/researcher.png`.
 
-News are stored as `.yml` file under [_data/news.yml](_data/news.yml).
+## Credits
 
-An entry looks like the following:
-
-```yaml
-- date: 03/09/19
-  title: "Something great"
-  tags:
-    - some
-    - tags
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Eu turpis egestas pretium aenean. Luctus venenatis lectus magna fringilla
-    urna porttitor. Lorem ipsum dolor sit amet. Pellentesque massa placerat
-    duis ultricies. Commodo viverra maecenas accumsan lacus vel.
-```
-
-### Edit template
-
-We use [Bootstrap](https://getbootstrap.com/) for designing the website.
-Feel free to modify either the [_pages](_pages/) or the
-[_layouts](_layouts/) components.
+The original research-lab template is derived from the
+[Allan Lab website](https://www.allanlab.org/aboutwebsite.html) at Leiden University.
+See `LICENSE` for the template's license.

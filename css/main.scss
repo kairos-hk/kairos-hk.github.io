@@ -1,52 +1,112 @@
 ---
 ---
 
+// The original Allan Lab template uses Bootstrap 3 and the Lumen theme.
+$web-font-path: "fonts.css";
 @import "bootstrap";
 
-body {
-  padding-top: 70px;
-  text-align: justify;
+body { padding-top: 70px; }
+.container-fluid { max-width: 1000px; margin-right: auto; margin-left: auto; }
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-5, .col-sm-6, .col-sm-7,
+.col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  padding-left: 16px; padding-right: 16px;
 }
+.col-sm-4 { padding-left: 26px; padding-right: 26px; }
+a, p, li { overflow-wrap: break-word; }
+img { max-width: 100%; height: auto; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 2px solid #158cba; outline-offset: 3px; }
+[id] { scroll-margin-top: 78px; }
+.skip-link { position: fixed; top: -60px; left: 16px; z-index: 1100; padding: 8px 14px; background: white; }
+.skip-link:focus { top: 8px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+.navbar .navbar-nav > li > a[aria-current="page"] { color: #333; }
+.site-main { min-height: 58vh; }
+.site-footer { margin: 34px 0 0; border-bottom: 0; }
+.panel-footer { padding: 20px 15px 12px; }
+.site-footer p { font-size: 15px; }
 
-figcaption {
-  text-align: right;
-  margin-top: -20px;
-  margin-bottom: 20px;
+// Home: two-thirds main column, one-third News, just as in the source.
+.home-profile { margin-top: 18px; }
+.home-portrait { float: left; width: 200px; margin: 0 22px 12px 0; border-radius: 5%; }
+.home-profile p { margin-bottom: 11px; }
+#newsid p { text-align: left; }
+.sidebar-heading { font-size: 20px; line-height: 1.1; margin: 11px 0 11px; }
+.news-item { margin-bottom: 16px; }
+.news-date { margin-bottom: 11px; }
+.research-interests li { margin-bottom: 6px; }
+.selected-publication { margin: 0 0 16px; }
+
+// Interior pages keep the template's ordinary headings and document flow.
+.page-heading { margin-bottom: 22px; }
+.page-heading .lead { font-size: 16px; line-height: 1.5; margin: 0; }
+.section { margin: 30px 0; }
+.section-title { margin-bottom: 16px; }
+.section-title h2 { margin: 0; }
+.profile-intro { display: flex; align-items: flex-start; gap: 26px; margin: 22px 0 30px; }
+.profile-intro > div { flex: 1; }
+.profile-intro img { width: 180px; border-radius: 5%; order: -1; }
+.profile-links { margin: 16px 0; }
+.profile-links a { margin-right: 16px; }
+.detail-timeline, .news-row { display: grid; grid-template-columns: 165px 1fr; gap: 25px; margin: 20px 0 28px; }
+.detail-timeline h3, .news-row h2 { font-size: 22px; margin: 0 0 6px; }
+.timeline-date, .meta, .role { color: #666; }
+.detail-timeline p, .news-row p { margin-bottom: 8px; }
+.detail-timeline li { margin-bottom: 6px; }
+.activity-list { padding-left: 22px; }
+.activity-list > li { margin-bottom: 22px; }
+.activity-list h3 { font-size: 22px; margin: 0 0 6px; }
+.activity-list p { margin-bottom: 8px; }
+.contact-list h2 { font-size: 28px; }
+.details-block { margin-top: 12px; }
+.details-block summary { cursor: pointer; color: #158cba; }
+.details-block[open] summary { margin-bottom: 10px; }
+.details-block p { max-width: 100%; }
+.archive-tools { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin: 20px 0 10px; }
+.filter-buttons { display: flex; flex-wrap: wrap; gap: 5px; }
+.filter-button { padding: 6px 10px; border: 1px solid #ddd; border-radius: 3px; background: #fff; font-size: 14px; }
+.filter-button[aria-pressed="true"] { background: #f5f5f5; color: #333; border-color: #aaa; }
+.search-field input { width: 245px; max-width: 100%; padding: 6px 10px; border: 1px solid #ddd; border-radius: 3px; }
+.results-count { font-size: 14px; color: #777; margin: 12px 0 22px; }
+.publication { margin-bottom: 25px; padding-bottom: 23px; border-bottom: 1px solid #eee; }
+.publication-year { font-size: 16px; color: #777; margin-bottom: 4px; }
+.publication h2 { font-size: 20px; line-height: 1.3; font-weight: 700; margin: 6px 0 8px; }
+.publication-meta { font-size: 14px; display: flex; align-items: center; gap: 10px; }
+.publication-authors { font-style: italic; }
+.publication-award { font-weight: 700; }
+.publication-actions a { margin-right: 16px; }
+.award-year { margin-bottom: 24px; }
+.award-row { display: grid; grid-template-columns: 165px 1fr; gap: 25px; margin: 18px 0 25px; }
+.award-row h3 { font-size: 21px; margin: 0 0 6px; }
+.award-date { color: #777; }
+.award-row p { margin-bottom: 6px; }
+.error-page { padding: 30px 0 70px; }
+.button { display: inline-block; padding: 8px 13px; border: 1px solid #ddd; border-radius: 3px; }
+
+@media (min-width: 768px) {
+  .site-nav { display: block; }
 }
-
-.breadcrumb {
-  background: none;
-  border: none;
-  display: block;
-  margin-left: 0;
-  padding-left: 0;
+@media (max-width: 767px) {
+  .navbar-header { display: flex; justify-content: space-between; align-items: center; }
+  .navbar-header::before, .navbar-header::after { display: none; }
+  .navbar-brand { font-size: 20px; white-space: nowrap; }
+  .navbar-toggle { flex-shrink: 0; margin: 8px 15px 8px 8px; }
+  .site-nav { display: none; border-top: 1px solid #e7e7e7; }
+  .site-nav.is-open { display: block; }
+  .navbar-nav { margin: 7px -15px; }
+  .site-nav a { padding-left: 16px !important; }
+  #newsid { padding-left: 16px; padding-right: 16px; margin-top: 24px; }
+  .site-footer .col-sm-4 { padding-left: 16px; padding-right: 16px; margin-bottom: 14px; }
+  .home-portrait { width: 145px; margin-right: 18px; }
+  .profile-intro { flex-direction: column; gap: 16px; }
+  .profile-intro img { width: 180px; }
+  .detail-timeline, .news-row, .award-row { grid-template-columns: 1fr; gap: 7px; }
+  .search-field, .search-field input { width: 100%; }
 }
-
-.nopadding-left {
-  padding-left: 0 !important;
-  margin-left: 0 !important;
+@media (max-width: 399px) {
+  .home-portrait { float: none; width: 180px; display: block; margin: 0 0 18px; }
 }
-
-.nopadding-right {
-  padding-right: 0 !important;
-  margin-right: 0 !important;
-}
-
-.team-member-card {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.container-fluid {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 900px; /* or 950px */
-}
-
-/* Carousel */
-
-.carousel {
-  border-radius: 3px 3px 3px 3px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+@media print {
+  body { padding-top: 0; }
+  .site-footer, .archive-tools, .skip-link { display: none; }
 }

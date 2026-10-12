@@ -1,0 +1,160 @@
+---
+name: Dongyoung Kim
+korean_name: 김동영
+role: Undergraduate Researcher & Founder/CEO
+affiliation: KAIST | PatchOne Industries Inc.
+location: Daejeon, Republic of Korea
+image: researcher.png
+summary: I am a KAIST undergraduate, cybersecurity and AI researcher, and founder
+  and CEO of PatchOne Industries Inc. My work spans AI-agent security and privacy,
+  memory forensics, side-channel analysis, post-quantum cryptography for constrained
+  embedded systems, and secure satellite communications. I combine research and international
+  conference presentations with product development, technology policy research, and
+  deep-tech entrepreneurship.
+social:
+  linkedin: https://www.linkedin.com/in/kairos-hk/
+  github: https://github.com/kairos-hk
+  orcid: https://orcid.org/0009-0006-6280-1534
+education:
+- institution: Korea Advanced Institute of Science and Technology (KAIST)
+  qualification: B.S. Undergraduate, Freshman Program; intended major in Computer
+    Science
+  period: 2026 - Present
+  description: Admitted through KAIST's specialized information-security talent pathway.
+    Active in cybersecurity research, the KAIST hacking community, entrepreneurship,
+    and technology commercialization.
+- institution: Massachusetts Institute of Technology (MITx)
+  qualification: MITx MicroMasters Program in Data, Economics, and Design of Policy
+    (DEDP)
+  period: 2026 - Present
+  description: Pursuing graduate-level coursework in economics, probability and statistics,
+    data analysis, and evidence-based policy design through MIT Economics and J-PAL.
+- institution: Gyeongbuk Software Meister High School
+  qualification: Diploma in Software Development and Cybersecurity
+  period: 2022 - 2025
+  description: Conducted research in digital forensics, embedded cryptography, side-channel
+    security, wearable-device forensics, AI security, and autonomous aerospace systems;
+    represented the school at national and international conferences.
+experience:
+- organization: PatchOne Industries Inc.
+  role: Founder and Chief Executive Officer
+  period: February 2026 - Present
+  highlights:
+  - Lead an AI deep-tech company spanning cybersecurity, global compliance automation,
+    and advanced aerospace and defense R&D. Direct strategy, research, product, sales,
+    partnerships, fundraising, and government programs; the underlying venture and
+    product work began in 2025.
+  - Expanded the platform from dynamic application security testing (DAST) automation
+    into continuous compliance assurance across security, privacy, AI governance,
+    and automotive cybersecurity frameworks.
+  - Recruited and managed a multidisciplinary team across AI, security, product engineering,
+    business development, legal and finance operations, and advanced R&D.
+  - Built B2B, B2B2G, and B2G pilot pipelines through customer discovery and on-site
+    outreach; supported security assessments for enterprise and South Korean public-sector
+    services.
+  - Lead international market development for compliance-driven security demand in
+    North America, Europe, and Japan.
+- organization: Ministry of Science and ICT, Republic of Korea
+  role: Policy Researcher, R&D and Artificial Intelligence
+  period: May 2026 - Present
+  highlights:
+  - Conduct policy research and advisory activities in R&D and AI, analyze national
+    science and ICT policies, and propose actionable improvements.
+  - Participate in official meetings, workshops, and policy forums with experts and
+    government officials, and support communication of key initiatives.
+- organization: Best of the Best (BoB), Korea Information Technology Research Institute
+  role: Security Product Development Track, 13th Cohort; Project Manager
+  period: July 2024 - March 2025
+  highlights:
+  - Selected among 200 trainees from 1,453 applicants for Korea's national cybersecurity
+    talent program; one of five admitted high-school students.
+  - Led a team implementing SMAUG-T post-quantum key establishment and LEA lightweight
+    encryption on an AVR 8-bit CubeSat platform with 8 KB SRAM, including memory profiling
+    and buffer optimization.
+  - Demonstrated encrypted satellite-ground communications in a stratospheric flight
+    at approximately 20 km altitude.
+service:
+- title: Case-Study Lecturer, KAIST OverEdge
+  period: '2026'
+  description: Delivered sessions on entrepreneurial team building, proof-of-concept
+    design, customer discovery, pilot recruitment, and product pivoting.
+- title: CODEGATE Research Session Speaker
+  period: '2025'
+  description: Delivered a technical talk on side-channel security research and portable-OS
+    memory forensics at CODEGATE 2025.
+- title: Cybersecurity and Computer Science Tutor
+  description: Designed practical instruction in C, Python, Linux, networking, Apache,
+    DNS, operating systems, and systems programming.
+- title: Operations Team, BoB Newsletter
+  period: February 2025 - Present
+  description: Korea Information Technology Research Institute.
+programs:
+- title: E5 KAIST
+  description: Completed business-model, customer-discovery, IR, and demo-day stages;
+    refined market definition, pricing, retention, differentiation, and product validation.
+- title: KAIST Global Studio
+  description: Resident company participant in startup mentoring, market expansion,
+    and investor-readiness activities.
+- title: Global Commercialization
+  description: Conducted customer and regulatory discovery in Europe and prepared
+    for Japanese market-entry and demo-day programs. Worked with venture-capital and
+    industry mentors on enterprise go-to-market strategy, fundraising, and partnerships.
+ko:
+  education:
+  - institution: KAIST
+    qualification: 학부 재학 · 새내기과정 / 전산학부 진학 예정
+    period: 2026 — 현재
+    description: 정보보호 특기자 전형으로 입학했습니다. 사이버보안 연구, 해킹 커뮤니티 활동, 창업과 기술 사업화를 함께 하고 있습니다.
+  - institution: MITx
+    qualification: Data, Economics, and Design of Policy MicroMasters 과정
+    period: 2026 — 현재
+    description: MIT Economics와 J-PAL의 경제학, 확률·통계, 데이터 분석, 근거 기반 정책 설계 과목을 수강하고 있습니다.
+  - institution: 경북소프트웨어마이스터고등학교
+    qualification: 소프트웨어 개발 및 사이버보안 교육과정 졸업
+    period: 2022 — 2025
+    description: 디지털 포렌식, 임베디드 암호, 부채널 보안과 AI·항공우주 시스템을 연구하며 국내외 학회에서 발표했습니다.
+  experience:
+  - organization: PatchOne Industries Inc.
+    role: 창업자 · 대표이사
+    period: 2026.02 — 현재
+    highlights:
+    - AI 기반 보안과 글로벌 컴플라이언스 자동화, 항공우주·국방 R&D를 다루는 딥테크 기업을 이끌고 있습니다. 사업과 제품 개발은 2025년에
+      시작했습니다.
+    - 연구·제품·영업·파트너십·투자 유치·정부지원사업을 총괄하고, 보안 점검 자동화를 지속적인 규정 준수 증빙으로 확장했습니다.
+    - AI, 보안, 제품 개발, 사업 개발, 법무·재무 및 R&D 분야의 팀을 구성하고 운영합니다.
+    - 기업과 공공기관의 보안 평가를 지원하고, 고객 발굴과 현장 방문을 통해 실증 사업을 추진했습니다. 북미·유럽·일본 시장 진출도 준비하고
+      있습니다.
+  - organization: 과학기술정보통신부
+    role: R&D · 인공지능 정책 연구
+    period: 2026.05 — 현재
+    highlights:
+    - 국가 과학기술·ICT 정책을 분석하고 R&D와 AI 분야의 개선 방안을 제안합니다.
+    - 전문가·정부 관계자와 회의, 워크숍, 정책 포럼에 참여하며 주요 정책의 소통과 홍보를 지원합니다.
+  - organization: Best of the Best 13기
+    role: 보안제품개발 트랙 · 프로젝트 매니저
+    period: 2024.07 — 2025.03
+    highlights:
+    - 지원자 1,453명 중 교육생 200명으로 선발됐으며, 합격한 고등학생 5명 중 한 명이었습니다.
+    - 8 KB SRAM을 갖춘 AVR 8-bit 큐브위성에서 SMAUG-T 양자내성 키 설정과 LEA 경량 암호를 구현하는 팀을 이끌었습니다.
+    - 약 20 km 고도의 성층권 비행에서 위성–지상 간 암호화 통신을 검증했습니다.
+  service:
+  - title: KAIST OverEdge 사례 강연
+    period: '2026'
+    description: 창업 팀 구성, 개념 검증, 고객 발굴, 실증 고객 모집과 제품 전환 경험을 나눴습니다.
+  - title: CODEGATE 연구 세션 발표
+    period: '2025'
+    description: 부채널 보안과 포터블 운영체제의 메모리 포렌식 연구를 발표했습니다.
+  - title: 사이버보안 · 컴퓨터과학 튜터
+    period: ''
+    description: C, Python, Linux, 네트워크, Apache, DNS, 운영체제와 시스템 프로그래밍을 가르쳤습니다.
+  - title: BoB 뉴스레터 운영팀
+    period: 2025.02 — 현재
+    description: 한국정보기술연구원의 BoB 뉴스레터 운영에 참여하고 있습니다.
+  programs:
+  - title: E5 KAIST
+    description: 사업 모델, 고객 발굴, IR, 데모데이 과정을 통해 시장 정의와 가격, 고객 유지, 제품 차별화 전략을 다듬었습니다.
+  - title: KAIST Global Studio
+    description: 입주 기업으로 창업 멘토링, 시장 확장, 투자 준비 프로그램에 참여했습니다.
+  - title: 글로벌 사업화
+    description: 유럽에서 고객과 규제 환경을 조사하고, 일본 시장 진출과 데모데이를 준비했습니다. 투자사·산업계 멘토와 영업 전략,
+      투자 유치, 파트너십을 논의했습니다.

@@ -1,0 +1,43 @@
+---
+title: Home
+layout: default
+home: true
+excerpt: "Dongyoung Kim — KAIST undergraduate, cybersecurity and AI researcher, and founder of PatchOne Industries."
+permalink: /
+---
+<div class="row">
+  <div id="homeid" class="col-sm-8">
+    <h1>Welcome to my homepage</h1>
+    <p><strong>Dongyoung Kim</strong><br>Undergraduate Researcher · Founder &amp; CEO</p>
+    <div class="home-profile clearfix">
+      <img class="home-portrait" src="{{ '/images/team/researcher.png' | relative_url }}" alt="Dongyoung Kim" width="200" height="200">
+      <p>I am an undergraduate at <a href="https://www.kaist.ac.kr/en/">KAIST</a> and the founder and CEO of <strong>PatchOne Industries Inc.</strong></p>
+      <p>My research focuses on <strong>cybersecurity and AI</strong>, with interests in AI-agent privacy, digital forensics, side-channel security, and post-quantum cryptography for embedded systems.</p>
+      <p>I work across research, product development, and technology policy, building practical security systems and exploring their applications in aerospace.</p>
+    </div>
+    <p>At PatchOne, I develop AI-driven security assessment and compliance automation. I also conduct R&amp;D and AI policy research at the Ministry of Science and ICT, Republic of Korea.</p>
+    <p><a href="{{ '/about/' | relative_url }}">More about me</a> · <a href="{{ site.data.profile.social.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="{{ site.data.profile.social.github }}" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="{{ site.data.profile.social.orcid }}" target="_blank" rel="noopener noreferrer">ORCID</a></p>
+    <h2>Research interests</h2>
+    <ul class="research-interests">
+      <li><strong>AI security &amp; privacy:</strong> user-intent leakage through agent discovery metadata and continuous security assessment.</li>
+      <li><strong>Digital forensics:</strong> volatile-memory evidence, portable operating systems, and wearable devices.</li>
+      <li><strong>Embedded cryptography:</strong> post-quantum secure communications on resource-constrained CubeSat platforms.</li>
+      <li><strong>Side-channel security:</strong> information leakage, countermeasures, and policy implications.</li>
+    </ul>
+    <h2>Selected publications &amp; talks</h2>
+    {% assign selected_ids = 'agentcardleak-2026,portable-os-forensics-2025,codegate-side-channels-2025' | split: ',' %}
+    {% for id in selected_ids %}{% assign publication = site.data.publications | where: 'id', id | first %}
+    <div class="selected-publication"><p><strong><a href="{{ '/publications/' | relative_url }}#{{ publication.id }}">{{ publication.title }}</a></strong><br>{{ publication.short_venue }} · {{ publication.issued.date-parts[0][0] }}{% if publication.award %}<br><em>{{ publication.award }}</em>{% endif %}</p></div>
+    {% endfor %}
+    <p><a href="{{ '/publications/' | relative_url }}">Full list of publications and talks →</a></p>
+    <h2>Selected honors</h2>
+    <ul><li>Korea Talent Award — Minister of Education’s Commendation (2025)</li><li>KSII Young Scientist Award (2025)</li><li>Korea Code Fair Grand Prize — Prime Minister’s Award (2022)</li></ul>
+    <p><a href="{{ '/achievement/' | relative_url }}">All honors and awards →</a></p>
+  </div>
+  <aside id="newsid" class="col-sm-4" aria-labelledby="news-title">
+    <div class="well"><h2 id="news-title" class="sidebar-heading">News</h2>
+      {% for item in site.data.news limit:7 %}<div class="news-item"><p class="news-date">{{ item.date }}</p><p>{{ item.title }}</p></div>{% endfor %}
+      <h3 class="sidebar-heading"><a href="{{ '/news.html' | relative_url }}">... see all News</a></h3>
+    </div>
+  </aside>
+</div>

@@ -1,19 +1,16 @@
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.title }} - {% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl | prepend: site.url}}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="shortcut icon" type ="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/images/favicon.ico">
-  <script src="https://kit.fontawesome.com/a24320d871.js" crossorigin="anonymous"></script>
-
-{% if jekyll.environment == 'production' %}
-{% include analytics.html %}
-{% endif %}
-
+  <title>{% if page.home %}Dongyoung Kim · Researcher &amp; Founder{% else %}{{ page.title | escape }} · Dongyoung Kim{% endif %}</title>
+  {% assign meta_description = page.excerpt | default: site.description | strip_html | strip_newlines | escape %}
+  <meta name="description" content="{{ meta_description }}">
+  <meta name="theme-color" content="#f8f8f8">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title | escape }} · Dongyoung Kim">
+  <meta property="og:description" content="{{ meta_description }}">
+  <meta property="og:image" content="{{ '/images/team/researcher.png' | absolute_url }}">
+  <meta property="og:locale" content="en_US">
+  <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
+  <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+  <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
 </head>
-
-
-

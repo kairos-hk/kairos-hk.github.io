@@ -1,26 +1,138 @@
+---
+- year: 2026
+  date: '2026'
+  title: Grand Prize, GRAVITY Startup Competition
+  organization: KAIST; Four Institutes of Science and Technology
+  description: Grand prize winner at the GRAVITY startup competition.
+  title_ko: GRAVITY 창업경진대회 대상
+  organization_ko: KAIST · 4개 과학기술원
+  description_ko: 과학기술원 연합 창업경진대회 대상 수상
+- year: 2026
+  date: '2026'
+  title: Winner, Cyber Security Competition
+  organization: KAIST-POSTECH Science War
+  description: Winner in the cybersecurity competition at the KAIST-POSTECH Science
+    War.
+  title_ko: KAIST–POSTECH 사이버보안 경진대회 우승
+  organization_ko: KAIST–POSTECH 학생대제전
+  description_ko: 사이버보안 경진대회 우승
+- year: 2026
+  date: '2026'
+  title: E5 KAIST Startup Competition Award
+  organization: KAIST
+  description: Award recipient at the E5 KAIST startup competition.
+  title_ko: E5 KAIST 창업경진대회 수상
+  organization_ko: KAIST
+  description_ko: E5 창업경진대회 수상
+- year: 2025
+  date: December 2025
+  title: Korea Talent Award - Minister of Education's Commendation
+  organization: Ministry of Education and Korea Student Aid Foundation
+  description: Selected among 100 recipients nationwide.
+  title_ko: 대한민국 인재상 · 교육부장관 표창
+  organization_ko: 교육부 · 한국장학재단
+  description_ko: 전국 수상자 100명 중 선정
+- year: 2025
+  date: December 2025
+  title: 5th Gyeongbuk Student Award - Superintendent of Education's Commendation
+  organization: Gyeongsangbuk-do Office of Education
+  description: One of seven students selected across the province.
+  title_ko: 제5회 경북학생상 · 교육감 표창
+  organization_ko: 경상북도교육청
+  description_ko: 도내 학생 7명 중 선정
+- year: 2025
+  date: November 2025
+  title: Grand Prize - Minister of Education Award
+  organization: Hyundai AutoEver White Hat Hacker Competition
+  description: Grand prize recipient in the 2025 White Hat Hacker Competition.
+  title_ko: 현대오토에버 화이트해커 경진대회 대상
+  organization_ko: 현대오토에버 · 교육부장관상
+  description_ko: 화이트해커 경진대회 대상 수상
+- year: 2025
+  date: July 2025
+  title: KSII Young Scientist Award
+  organization: 20th Asia Pacific International Conference on Information Science
+    and Technology (APIC-IST 2025)
+  description: Recognized for research on portable operating-system memory forensics.
+  title_ko: KSII Young Scientist Award
+  organization_ko: APIC-IST 2025
+  description_ko: 포터블 운영체제 메모리 포렌식 연구
+- year: 2025
+  date: February 2025
+  title: Undergraduate Outstanding Paper Award
+  organization: Korea Institute of Information Scientists and Engineers; 2024 Korea
+    Software Congress
+  description: Recognized for the paper on post-quantum cryptography optimization
+    in low-resource environments; award issued in February 2025.
+  title_ko: 학부생 우수논문상
+  organization_ko: 한국정보과학회 · KSC 2024
+  description_ko: 저자원 환경의 양자내성 암호 최적화 연구 · 2025년 2월 수상
 - year: 2024
-  date: 2024-10-12
-  title: "Outstanding Research Award"
-  organization: "International Conference on Examples"
-  description: "Received for contributions to example-driven research in computational methods."
-  attachments:
-    - images/awards/poster-2023.png
-    - images/awards/researcher.png
-
+  date: December 2024
+  title: Outstanding Paper Award
+  organization: Korea Institute of Information Technology; 2024 KIIT Fall Conference
+  description: Recognized for identifying forensic artifacts in smartwatches through
+    Wear OS AVD.
+  title_ko: 우수논문상
+  organization_ko: 한국정보기술학회 · KIIT 추계학술대회
+  description_ko: Wear OS 스마트워치 포렌식 연구
+- year: 2024
+  date: December 2024
+  title: Commendation for Cybersecurity and National Security
+  organization: Korea Freedom Federation
+  description: Commendation recognizing contributions to cybersecurity and national
+    security.
+  title_ko: 사이버보안 및 국가안보 공로 표창
+  organization_ko: 한국자유총연맹
+  description_ko: 사이버보안과 국가안보 기여에 대한 표창
+- year: 2024
+  date: '2024'
+  title: Republic of Korea White Hat Hacker Awards Ceremony Honoree
+  organization: 2024 Republic of Korea White Hat Hacker Awards Ceremony
+  description: Honoree at the national White Hat Hacker Awards Ceremony.
+  title_ko: 대한민국 화이트해커 시상식 수상
+  organization_ko: 2024 대한민국 화이트해커 시상식
+  description_ko: 대한민국 화이트해커 시상식 수상자
+- year: 2024
+  date: April 2024
+  title: Gold Medal, Cybersecurity
+  organization: Gyeongbuk Skills Competition; Ministry of Employment and Labor and
+    Korea Skills Quality Authority
+  description: Gold medal in the cybersecurity category.
+  title_ko: 경상북도 기능경기대회 사이버보안 금메달
+  organization_ko: Ministry of Employment and Labor · Korea Skills Quality Authority
+  description_ko: 사이버보안 직종 금메달
 - year: 2023
-  date: 2023-06-05
-  title: "Best Poster Award"
-  organization: "Sample Symposium"
-  description: "Awarded best poster for the project 'Example Systems'."
-  attachments:
-    - images/awards/poster-2023.png
-    - images/awards/researcher.png
-
+  date: November 2023
+  title: Third Place - EBS President's Award; Special Award - AWS Korea President's
+    Award
+  organization: National AI Frontier Competition
+  description: Developed an AI lung-disease detection service.
+  title_ko: EBS 사장상 · AWS Korea 사장 특별상
+  organization_ko: 전국 AI 프런티어 대회
+  description_ko: AI 폐질환 탐지 서비스 개발 · 3위 및 특별상
+- year: 2023
+  date: October 2023
+  title: Gold Prize, National Student Design Competition
+  organization: Korean Society of Mechanical Engineers
+  description: Designed a radiosonde-based AI volcano prediction system.
+  title_ko: 전국학생설계경진대회 금상
+  organization_ko: 대한기계학회
+  description_ko: 라디오존데 기반 AI 화산 예측 시스템
+- year: 2023
+  date: August 2023
+  title: Korea Aerospace Research Institute President's Award
+  organization: KAIST CanSat Competition
+  description: Developed a satellite system for predicting volcanic eruptions and
+    lava movement.
+  title_ko: 캔위성 경연대회 한국항공우주연구원장상
+  organization_ko: KAIST 캔위성 경연대회
+  description_ko: 화산 분화와 용암 이동 예측 위성 시스템
 - year: 2022
-  date: 2022-11-20
-  title: "Young Researcher Prize"
-  organization: "Example Foundation"
-  description: "Recognized as a promising early-career researcher for work on sample applications."
-  attachments:
-    - images/awards/poster-2023.png
-    - images/awards/researcher.png
+  date: December 2022
+  title: Grand Prize - Prime Minister's Award
+  organization: Korea Code Fair; Ministry of Science and ICT
+  description: Developed a flood-avoidance navigation algorithm and service.
+  title_ko: 한국코드페어 대상 · 국무총리상
+  organization_ko: 과학기술정보통신부
+  description_ko: 침수 위험을 피하는 경로 안내 알고리즘과 서비스
